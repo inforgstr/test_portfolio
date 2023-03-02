@@ -1,5 +1,5 @@
 # My Portfolio
-Welcome to my portfolio! This website showcases my projects, skills, and courses as a web developer.
+Welcome to my portfolio! This website showcases my projects, skills, and courses.
 
 # Table of Contents
 - Home
