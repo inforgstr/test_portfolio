@@ -1,0 +1,58 @@
+
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .h2{
+        position: relative;
+        left: 30%;
+        margin: 100px;
+    }
+    .h1{
+        position: absolute;
+        margin: 10px;
+        left: 40%;
+        top: 10px;
+    }
+
+    h3{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    p{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .img{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+</style>
+
+<img src="{% static 'portfolio/developer.jpg' %}" height="300px" width="500px">
+<h1 class="h1">Hi! My name is ...<br>I'm Python developer</h1>
+<h2 class="h2">There my courses</h2>
+{% for project in projects %}
+        <h3>{{ project.title }}</h3>
+        <p><br>{{ project.description|truncatechars:100 }}</p>
+        <div class="img">
+            {% if project.url %}
+                <a href="{{ project.url }}">
+                    <img src="{{ project.image.url }}" height="400px" width="600px">
+                </a>
+            {% endif %}
+            {% if not project.url %}
+                <img src="{{ project.image.url }}" height="400px" width="600px">
+            {% endif %}
+        </div>
+{% endfor %}
+{% endblock %}

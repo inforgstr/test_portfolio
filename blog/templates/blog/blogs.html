@@ -1,0 +1,35 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+<style>
+    h1{
+        position: relative;
+        left: 30%;
+    }
+    .title{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: 20px;
+    }
+    .date{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .description{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+</style>
+<h1>{{ blogs.count }} blog{{ blogs.count|pluralize }} has been written</h1>
+{% for blog in blogs %}
+    <a class="title" href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2><br></a>
+    <h4 class="date">{{ blog.created_at|date:"Y d M" }}<br></h4>
+    <p class="description">{{ blog.description|striptags|truncatechars:50 }}<br><br></p>
+{% endfor %}
+{% endblock %}

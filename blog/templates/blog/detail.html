@@ -1,0 +1,40 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+<style>
+    h1{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: 0;
+    }
+    h2{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    h3{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    p{
+        position: relative;
+        width: 1100px;
+        left: 10%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+</style>
+
+
+<h1>Blog</h1>
+<h2>---{{ blog.title }}---</h2>
+<h3>--{{ blog.created_at|date:"F jS Y" }}--<br></h3>
+<p>{{ blog.description|safe }}<br></p>
+
+{% endblock %}
