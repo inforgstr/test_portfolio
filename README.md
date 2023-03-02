@@ -27,7 +27,3 @@ The courses page in progress.
 - migrate database `python manage.py migrate`
 
 - run project `python manage.py runserver`
-
-
-# CONGRATS!
-If you have any question, please let me know - You can discuss it with me in discussion.
