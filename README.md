@@ -8,10 +8,6 @@ Welcome to my portfolio! This website showcases my projects, skills, and courses
 # Home
 The home page features a brief introduction about myself and my experience as a web developer. It also includes links to my projects and skills pages, where you can learn more about my work.
 
-# Courses
-The courses section is not available now.
-
-The courses page in progress.
 
 # Run
 - clone it into your folder `git clone https://github.com/inforgstr/test_portfolio.git`
